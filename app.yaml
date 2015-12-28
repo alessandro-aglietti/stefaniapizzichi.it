@@ -37,6 +37,13 @@ handlers:
 - url: /robots\.txt
   static_files: robots.txt
   upload: robots\.txt
+  
+- url: /fancybox
+  static_dir: fancybox
+
+- url: /works
+  static_dir: works
+
 
 libraries:
 - name: webapp2
