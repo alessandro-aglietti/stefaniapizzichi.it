@@ -207,7 +207,8 @@ function registerFancyboxe() {
                 startFromThisIndex = ($(elementOfArray).attr("sp-href") === $(thiss).attr("sp-href")) ? indexInArray : startFromThisIndex;
                 return {
                     "href": $(elementOfArray).attr("sp-href"),
-                    "title" : $(elementOfArray).find("div.text-image h1").html()
+                    "sp-class" : $(elementOfArray).attr("sp-class")
+                   // "title" : $(elementOfArray).find("div.text-image h1").html()
                 };
 
 
@@ -226,15 +227,34 @@ function registerFancyboxe() {
                 closeBtn: false,
                 scrolling: 'hide',
                 padding: 0,
-                margin: 20,
+                margin: [20, 0, 0, 0], // TODO settare questo in base a mobile(20)
+                width: "70%", // TODO settare questo in base a mobile(100%)
+                height: "100%",
+                autoSize : false,
                 arrows: false,
                 mouseWheel: false,
                 afterShow: function(current, previous) {
                     setTimeout(function() {
-                        $('.fancybox-inner').slimScroll({
-                            height: $('.fancybox-inner').height() + 'px'
+                        /*var fbtop = Number($(".fancybox-wrap").css("top").replace("px", ""));
+                        var fbwrap = $(".fancybox-wrap").height();
+                        var growH = $(window).height() - fbwrap - fbtop;
+                        
+                        var newH = fbwrap + growH;
+                        var newH = '' + newH + "px";
+                        
+                        $(".fancybox-wrap").height(newH);
+                        $(".fancybox-skin").height(newH);
+                        $(".fancybox-outer").height(newH);
+                        $(".fancybox-inner").height(newH);*/
+                    
+                        var sticaHeight = $('.fancybox-inner').height() - $('.menulight').height();
+                        $('#slimscrollthis').height("" + sticaHeight + "px");
+                        $('#slimscrollthis').slimScroll({
+                            height: $('#scroll-inner').height + 'px'
                         });
-                    }, 400);
+                        //$('#slimscrollthis').width("100%");
+                        $("#slimscrollthis").trigger("mouseover");
+                    }, 500);
 
                     return true;
                 }
