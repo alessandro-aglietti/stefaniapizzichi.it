@@ -318,10 +318,10 @@ function BIND_SWIPE() {
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
             switch (direction) {
                 case "right":
-                    $.fancybox.next();
+                    $.fancybox.prev();
                     break;
                 case "left":
-                    $.fancybox.prev();
+                    $.fancybox.next();
                     break;
             }
 
