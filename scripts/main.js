@@ -311,9 +311,12 @@ $(function() {
     });
 });
 
-
+var UNBIND_SWIPE = null;
 function BIND_SWIPE() {
-    $(".fancybox-inner").swipe({
+    if ( UNBIND_SWIPE ) {
+        UNBIND_SWIPE.off();
+    }
+    UNBIND_SWIPE = $(".fancybox-inner").swipe({
         //Generic swipe handler for all directions
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
             switch (direction) {
