@@ -254,6 +254,7 @@ function registerFancyboxe() {
                         });
                         //$('#slimscrollthis').width("100%");
                         $("#slimscrollthis").trigger("mouseover");
+                        BIND_SWIPE();
                     }, 500);
 
                     return true;
@@ -309,3 +310,21 @@ $(function() {
 
     });
 });
+
+
+function BIND_SWIPE() {
+    $(".fancybox-inner").swipe({
+        //Generic swipe handler for all directions
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            switch (direction) {
+                case "right":
+                    $.fancybox.next();
+                    break;
+                case "left":
+                    $.fancybox.prev();
+                    break;
+            }
+
+        }
+    });
+}

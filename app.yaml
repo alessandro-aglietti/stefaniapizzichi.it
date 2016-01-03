@@ -1,5 +1,5 @@
 application: stefania-pizzichi
-version: 11-ago-15
+version: 03-gen-16
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -47,6 +47,8 @@ handlers:
 - url: /enquire
   static_dir: enquire
 
+- url: /touchswipe
+  static_dir: touchswipe
 
 libraries:
 - name: webapp2
