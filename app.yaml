@@ -43,6 +43,9 @@ handlers:
 
 - url: /works
   static_dir: works
+  
+- url: /enquire
+  static_dir: enquire
 
 
 libraries:

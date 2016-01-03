@@ -207,8 +207,8 @@ function registerFancyboxe() {
                 startFromThisIndex = ($(elementOfArray).attr("sp-href") === $(thiss).attr("sp-href")) ? indexInArray : startFromThisIndex;
                 return {
                     "href": $(elementOfArray).attr("sp-href"),
-                    "sp-class" : $(elementOfArray).attr("sp-class")
-                   // "title" : $(elementOfArray).find("div.text-image h1").html()
+                    "sp-class": $(elementOfArray).attr("sp-class")
+                        // "title" : $(elementOfArray).find("div.text-image h1").html()
                 };
 
 
@@ -227,10 +227,10 @@ function registerFancyboxe() {
                 closeBtn: false,
                 scrolling: 'hide',
                 padding: 0,
-                margin: [20, 0, 0, 0], // TODO settare questo in base a mobile(20)
-                width: "70%", // TODO settare questo in base a mobile(100%)
+                margin: SP_ENQUIRE.getFancyMargin(), // TODO settare questo in base a mobile(20) con http://wicky.nillia.ms/enquire.js/
+                width: SP_ENQUIRE.getFancyWidth(), // TODO settare questo in base a mobile(100%)
                 height: "100%",
-                autoSize : false,
+                autoSize: false,
                 arrows: false,
                 mouseWheel: false,
                 afterShow: function(current, previous) {
@@ -246,7 +246,7 @@ function registerFancyboxe() {
                         $(".fancybox-skin").height(newH);
                         $(".fancybox-outer").height(newH);
                         $(".fancybox-inner").height(newH);*/
-                    
+
                         var sticaHeight = $('.fancybox-inner').height() - $('.menulight').height();
                         $('#slimscrollthis').height("" + sticaHeight + "px");
                         $('#slimscrollthis').slimScroll({
@@ -265,3 +265,47 @@ function registerFancyboxe() {
         return false;
     });
 }
+
+var SP_ENQUIRE = {
+    margin: [20, 0, 0, 0],
+    width: "70%"
+};
+SP_ENQUIRE.getFancyMargin = function() {
+    return SP_ENQUIRE.margin;
+};
+SP_ENQUIRE.getFancyWidth = function() {
+    return SP_ENQUIRE.width;
+};
+
+
+$(function() {
+    enquire.register("screen and (max-width:768px)", {
+
+        // OPTIONAL
+        // If supplied, triggered when a media query matches.
+        match: function() {
+            SP_ENQUIRE.margin = 20;
+            SP_ENQUIRE.width = "100%";
+        },
+
+        // OPTIONAL
+        // If supplied, triggered when the media query transitions 
+        // *from a matched state to an unmatched state*.
+        unmatch: function() {},
+
+        // OPTIONAL
+        // If supplied, triggered once, when the handler is registered.
+        setup: function() {},
+
+        // OPTIONAL, defaults to false
+        // If set to true, defers execution of the setup function 
+        // until the first time the media query is matched
+        deferSetup: true,
+
+        // OPTIONAL
+        // If supplied, triggered when handler is unregistered. 
+        // Place cleanup code here
+        destroy: function() {}
+
+    });
+});
