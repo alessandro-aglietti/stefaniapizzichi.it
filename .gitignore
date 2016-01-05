@@ -1,8 +1,9 @@
 *.jpg
 *.png
-.DS_STORE
+.DS_Store
 *.pyc
 lib/
 !lib/README
 /.project
 /.pydevproject
+*.mp4
