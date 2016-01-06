@@ -238,10 +238,10 @@ function registerFancyboxe() {
                         /*var fbtop = Number($(".fancybox-wrap").css("top").replace("px", ""));
                         var fbwrap = $(".fancybox-wrap").height();
                         var growH = $(window).height() - fbwrap - fbtop;
-                        
+
                         var newH = fbwrap + growH;
                         var newH = '' + newH + "px";
-                        
+
                         $(".fancybox-wrap").height(newH);
                         $(".fancybox-skin").height(newH);
                         $(".fancybox-outer").height(newH);
@@ -255,6 +255,7 @@ function registerFancyboxe() {
                         //$('#slimscrollthis').width("100%");
                         $("#slimscrollthis").trigger("mouseover");
                         BIND_SWIPE();
+                        OTHER_SIZES();
                     }, 500);
 
                     return true;
@@ -290,7 +291,7 @@ $(function() {
         },
 
         // OPTIONAL
-        // If supplied, triggered when the media query transitions 
+        // If supplied, triggered when the media query transitions
         // *from a matched state to an unmatched state*.
         unmatch: function() {},
 
@@ -299,12 +300,12 @@ $(function() {
         setup: function() {},
 
         // OPTIONAL, defaults to false
-        // If set to true, defers execution of the setup function 
+        // If set to true, defers execution of the setup function
         // until the first time the media query is matched
         deferSetup: true,
 
         // OPTIONAL
-        // If supplied, triggered when handler is unregistered. 
+        // If supplied, triggered when handler is unregistered.
         // Place cleanup code here
         destroy: function() {}
 
@@ -330,4 +331,10 @@ function BIND_SWIPE() {
 
         }
     });
+}
+
+function OTHER_SIZES() {
+  $("#slimscrollthis").find("img").each(function(){
+    $(this).attr('src', $(this).attr('src').replace(new RegExp('src="/works/[a-z]*(/)'), '/' + IMGPATH);
+  });
 }
