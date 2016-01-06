@@ -252,7 +252,7 @@ function registerFancyboxe() {
                         $('#slimscrollthis').slimScroll({
                             height: $('#scroll-inner').height + 'px'
                         });
-                        //$('#slimscrollthis').width("100%");
+                        $('#slimscrollthis').width("100%");
                         $("#slimscrollthis").trigger("mouseover");
                         BIND_SWIPE();
                         OTHER_SIZES();
