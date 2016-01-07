@@ -248,10 +248,16 @@ function registerFancyboxe() {
                         $(".fancybox-inner").height(newH);*/
 
                         var sticaHeight = $('.fancybox-inner').height() - $('.menulight').height();
-                        $('#slimscrollthis').height("" + sticaHeight + "px");
-                        $('#slimscrollthis').slimScroll({
-                            height: $('#scroll-inner').height + 'px'
-                        });
+                        //alert($('.fancybox-inner').height());
+                        //$('#slimscrollthis').parent().height("" + sticaHeight + "px");
+                        $('#slimscrollthis').height(sticaHeight);
+                        $("#scroll-inner").height("auto");
+                        $('#slimscrollthis').css("overflow", "scroll");
+                        //alert('parent css: ' + $('#slimscrollthis').parent().css("height"));
+                        /*$('#slimscrollthis').slimScroll({
+                            height: sticaHeight + 'px',
+                            touchScrollStep: 50
+                        });*/
                         $('#slimscrollthis').width("100%");
                         $("#slimscrollthis").trigger("mouseover");
                         BIND_SWIPE();
@@ -319,6 +325,7 @@ function BIND_SWIPE() {
     }
     UNBIND_SWIPE = $(".fancybox-inner").swipe({
         //Generic swipe handler for all directions
+        allowPageScroll : "vertical",
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
             switch (direction) {
                 case "right":
@@ -329,6 +336,7 @@ function BIND_SWIPE() {
                     break;
             }
 
+            return true;
         }
     });
 }
