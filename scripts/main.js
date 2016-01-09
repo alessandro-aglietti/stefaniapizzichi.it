@@ -234,7 +234,7 @@ function registerFancyboxe() {
                 arrows: false,
                 mouseWheel: false,
                 beforeClose : function(){
-                    $("body").css({"overflow":"auto"});
+                    $("body").css({"overflow-y":"scroll", "overflow-x":"hidden"});
                 },
                 afterShow: function(current, previous) {
                     setTimeout(function() {

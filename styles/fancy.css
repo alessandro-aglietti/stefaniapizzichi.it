@@ -72,3 +72,11 @@ div.menulight span.fancy-title-font {
     font-size: 20px;
     margin-top: 40px;
 }
+
+.fancybox-wrap iframe.vimeo {
+    position: absolute;
+    top: 11%;
+    margin-left: 10%;
+    width: 79%;
+    height: 66%;
+}
