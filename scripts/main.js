@@ -233,6 +233,9 @@ function registerFancyboxe() {
                 autoSize: false,
                 arrows: false,
                 mouseWheel: false,
+                beforeClose : function(){
+                    $("body").css({"overflow":"auto"});
+                },
                 afterShow: function(current, previous) {
                     setTimeout(function() {
                         /*var fbtop = Number($(".fancybox-wrap").css("top").replace("px", ""));
@@ -259,9 +262,11 @@ function registerFancyboxe() {
                             touchScrollStep: 50
                         });*/
                         $('#slimscrollthis').width("100%");
-                        $("#slimscrollthis").trigger("mouseover");
+                        //$("#slimscrollthis").trigger("mouseover");
                         BIND_SWIPE();
                         OTHER_SIZES();
+                        
+                        $("body").css({"overflow":"hidden"});
                     }, 500);
 
                     return true;
