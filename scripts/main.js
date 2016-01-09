@@ -267,6 +267,12 @@ function registerFancyboxe() {
                         OTHER_SIZES();
                         
                         $("body").css({"overflow":"hidden"});
+                        
+                        if ( $(".vimeo-cover") ) {
+                            var vimeoCoverHeight = $(".vimeo-cover").width() * 9 / 16;
+                            $(".vimeo-cover").height(vimeoCoverHeight + "px");
+                        }
+                        
                     }, 500);
 
                     return true;
