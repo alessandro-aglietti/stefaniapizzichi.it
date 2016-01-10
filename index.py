@@ -54,9 +54,12 @@ class Works(webapp2.RequestHandler):
         }
         
         url = 'https://jsonblob.com/api/jsonBlob/56928c77e4b01190df48a7df?t=' + str(time.time())
-        result = urlfetch.fetch(url=url, headers=headers)
+        #result = urlfetch.fetch(url=url, headers=headers)
         #if result.status_code == 200:
-        model=json.loads(result.content)
+        #model=json.loads(result.content)
+        
+        with open('sp.json', 'r') as myfile:
+            model=json.loads(myfile.read().replace('\n', ''))
         
         
         '''

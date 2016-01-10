@@ -1,0 +1,281 @@
+{
+	"works": {
+		"arya": {
+			"topbar": "Arya SanPellegrino",
+			"template": "works/cover-text-imgs.html",
+			"h1": "Arya SanPellegrino - Packaging",
+			"h3": "Naming and design with Fabrizio Coco and Luca Cappalonga @ NABA, 2015",
+			"year": "2014",
+			"tag": "Packaging, Beverage, Brush, Calligraphy, Bottle",
+			"imgs": [{
+				"src": "arya_work.png"
+			}]
+		},
+		"mff2014": {
+			"topbar": "Milano Film Festival 2014",
+			"template": "works/vimeo-text-imgs.html",
+			"vimeoid": "102814825",
+			"h1": "Milano Film Festival 2014 - Corporate ID",
+			"h3": "@ Progetti Digitali, 2014",
+			"year": "2014",
+			"tag": "Corporate ID, Motion graphic",
+			"imgs": [{
+				"src": "mff2014_1.png"
+			}, {
+				"src": "mff2014_2.png"
+			}, {
+				"src": "mff2014_3.png"
+			}]
+		},
+		"anthea": {
+			"topbar": "Anthea: Wildlife park",
+			"template": "works/cover-text-imgs.html",
+			"h1": "Anthea: Wildlife park - Corporate ID",
+			"h3": "@ NABA, 2015",
+			"year": "2014",
+			"tag": "Corporate ID",
+			"imgs": [{
+				"src": "anthea_1.png"
+			}, {
+				"src": "anthea_2.png"
+			}, {
+				"src": "anthea_3.png"
+			}, {
+				"src": "anthea_4.png"
+			}, {
+				"src": "anthea_5.png"
+			}, {
+				"src": "anthea_6.png"
+			}, {
+				"src": "anthea_7.png"
+			}, {
+				"src": "anthea_8.png"
+			}, {
+				"src": "anthea_9.png"
+			}]
+		},
+		"artdirection1": {
+			"topbar": "",
+			"template": "works/text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "2014",
+			"tag": "",
+			"imgs": [{
+				"src": "artdirection1_1.png"
+			}, {
+				"src": "artdirection1_2.png"
+			}, {
+				"src": "artdirection1_3.png"
+			}, {
+				"src": "artdirection1_4.png"
+			}]
+		},
+		"artdirection2": {
+			"topbar": "",
+			"template": "works/text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "2014",
+			"tag": "",
+			"imgs": [{
+				"src": "artdirection2_1.png"
+			}, {
+				"src": "artdirection2_2.png"
+			}]
+		},
+		"diomira": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "2014",
+			"tag": "",
+			"imgs": [{
+				"src": "diomira.png"
+			}]
+		},
+		"elino": {
+			"topbar": "",
+			"template": "works/cover-text-vimeo.html",
+			"vimeoid": "84303449",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": ""
+		},
+		"environmental": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "environmental.png"
+			}]
+		},
+		"handleit": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "handleit_1.png"
+			}, {
+				"src": "handleit_2.png"
+			}, {
+				"src": "handleit_3.png"
+			}, {
+				"src": "handleit_4.png"
+			}]
+		},
+		"iconset": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "iconset_1.png"
+			}, {
+				"src": "iconset_2.png"
+			}, {
+				"src": "iconset_3.png"
+			}, {
+				"src": "iconset_4.png"
+			}, {
+				"src": "iconset_5.png"
+			}, {
+				"src": "iconset_6.png"
+			}, {
+				"src": "iconset_7.png"
+			}, {
+				"src": "iconset_8.png"
+			}]
+		},
+		"logoanimation": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "logoanimation_1.png"
+			}, {
+				"src": "logoanimation_2.png"
+			}]
+		},
+		"murphy": {
+			"topbar": "",
+			"template": "works/cover-text-vimeo.html",
+			"vimeoid": "91925381",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": ""
+		},
+		"portalegiovani": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "portalegiovani_1.png"
+			}, {
+				"src": "portalegiovani_2.png"
+			}, {
+				"src": "portalegiovani_3.png"
+			}, {
+				"src": "portalegiovani_4.png"
+			}, {
+				"src": "portalegiovani_5.png"
+			}, {
+				"src": "portalegiovani_6.png"
+			}]
+		},
+		"pre-delay": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "pre-delay_1.png"
+			}, {
+				"src": "pre-delay_2.png"
+			}, {
+				"src": "pre-delay_3.png"
+			}, {
+				"src": "pre-delay_4.png"
+			}, {
+				"src": "pre-delay_5.png"
+			}, {
+				"src": "pre-delay_6.png"
+			}]
+		},
+		"rainyday": {
+			"topbar": "",
+			"template": "works/text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "rainyday.png"
+			}]
+		},
+		"rebus": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "rebus_1.png"
+			}, {
+				"src": "rebus_2.png"
+			}, {
+				"src": "rebus_3.png"
+			}, {
+				"src": "rebus_4.png"
+			}]
+		},
+		"seta": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "seta_1.png"
+			}, {
+				"src": "seta_2.png"
+			}, {
+				"src": "seta_3.png"
+			}, {
+				"src": "seta_4.png"
+			}]
+		},
+		"spizzy": {
+			"topbar": "",
+			"template": "works/cover-text-imgs.html",
+			"h1": "",
+			"h3": "",
+			"year": "",
+			"tag": "",
+			"imgs": [{
+				"src": "spizzy.png"
+			}]
+		}
+	}
+}
