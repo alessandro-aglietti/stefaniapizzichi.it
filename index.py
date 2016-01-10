@@ -1,13 +1,19 @@
 import os
-import urllib
+import time
 
 import webapp2
 import jinja2
 from google.appengine.ext import vendor
 import logging
 
+import json
+
 # Add any libraries installed in the "lib" folder.
 vendor.add('lib')
+
+#import requests
+from google.appengine.api import urlfetch
+
 
 from user_agents import parse
 
@@ -40,8 +46,20 @@ class MainPage(webapp2.RequestHandler):
 
 class Works(webapp2.RequestHandler):
 
-    def get(self, work):
+    def get(self, work,  trash):
         
+        headers = {
+                   "Content-Type" : "application/json",
+                   "Accept" : "application/json"
+        }
+        
+        url = 'https://jsonblob.com/api/jsonBlob/56928c77e4b01190df48a7df?t=' + str(time.time())
+        result = urlfetch.fetch(url=url, headers=headers)
+        #if result.status_code == 200:
+        model=json.loads(result.content)
+        
+        
+        '''
         model = {
             'works': {
                 "arya" : {
@@ -56,6 +74,7 @@ class Works(webapp2.RequestHandler):
                 }
             }
          }
+        '''
         
         tmodel = model["works"][work]
         tmodel["work"] = work
@@ -65,5 +84,5 @@ class Works(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/index-partial', MainPage),
-    webapp2.Route(r'/works/<work>', handler=Works)
+    webapp2.Route(r'/works/<work>/<trash>', handler=Works)
 ], debug=True)
