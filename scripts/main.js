@@ -234,10 +234,18 @@ function registerFancyboxe() {
                 arrows: false,
                 mouseWheel: false,
                 beforeClose : function(){
-                    $("body").css({"overflow-y":"scroll", "overflow-x":"hidden"});
+                    $("body").css({"overflow-y":"scroll", "overflow-x":"hidden", "height": "auto"});
+                },
+                beforeShow : function() {
+                    $("body").css("overflow", "hidden");
+                    var window_height = $(window).height();
+                    $("body").css("height", window_height + "px");
                 },
                 afterShow: function(current, previous) {
                     setTimeout(function() {
+                    
+                        
+                    
                         /*var fbtop = Number($(".fancybox-wrap").css("top").replace("px", ""));
                         var fbwrap = $(".fancybox-wrap").height();
                         var growH = $(window).height() - fbwrap - fbtop;
@@ -255,7 +263,8 @@ function registerFancyboxe() {
                         //$('#slimscrollthis').parent().height("" + sticaHeight + "px");
                         $('#slimscrollthis').height(sticaHeight);
                         $("#scroll-inner").height("auto");
-                        $('#slimscrollthis').css("overflow", "scroll");
+                        $('#slimscrollthis').css("overflow-y", "scroll");
+                        $('#slimscrollthis').css("-webkit-overflow-scrolling", "touch");
                         //alert('parent css: ' + $('#slimscrollthis').parent().css("height"));
                         /*$('#slimscrollthis').slimScroll({
                             height: sticaHeight + 'px',
@@ -266,7 +275,7 @@ function registerFancyboxe() {
                         BIND_SWIPE();
                         OTHER_SIZES();
                         
-                        $("body").css({"overflow":"hidden"});
+                        
                         
                         if ( $(".vimeo-cover") ) {
                             var vimeoCoverHeight = $(".vimeo-cover").width() * 9 / 16;
@@ -336,7 +345,7 @@ function BIND_SWIPE() {
     }
     UNBIND_SWIPE = $(".fancybox-inner").swipe({
         //Generic swipe handler for all directions
-        allowPageScroll : "vertical",
+        allowPageScroll : "auto",
         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
             switch (direction) {
                 case "right":
