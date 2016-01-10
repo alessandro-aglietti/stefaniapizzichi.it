@@ -41,8 +41,8 @@ handlers:
 - url: /fancybox
   static_dir: fancybox
 
-- url: /works
-  static_dir: works
+- url: /works/.*
+  script: index.app
   
 - url: /enquire
   static_dir: enquire

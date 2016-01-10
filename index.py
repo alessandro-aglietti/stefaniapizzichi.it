@@ -38,6 +38,32 @@ class MainPage(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('index-partial.html')
         self.response.write(template.render(template_values))
 
+class Works(webapp2.RequestHandler):
+
+    def get(self, work):
+        
+        model = {
+            'works': {
+                "arya" : {
+                    "topbar" : "Arya",
+                    "template" : "works/cover-text-imgs.html",
+                    "h1" : "Arya",
+                    "h3" : "fatto @ NABA",
+                    "tag" : "packaging, web",
+                    "imgs" : [{
+                        "src" : "//src"
+                    }]
+                }
+            }
+         }
+        
+        tmodel = model["works"][work]
+        tmodel["work"] = work
+        template = JINJA_ENVIRONMENT.get_template(tmodel["template"])
+        
+        self.response.write(template.render(tmodel))
+
 app = webapp2.WSGIApplication([
     ('/index-partial', MainPage),
+    webapp2.Route(r'/works/<work>', handler=Works)
 ], debug=True)
