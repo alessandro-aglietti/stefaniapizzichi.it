@@ -46,7 +46,7 @@ class MainPage(webapp2.RequestHandler):
 
 class Works(webapp2.RequestHandler):
 
-    def get(self, work,  trash):
+    def get(self, work):
         
         headers = {
                    "Content-Type" : "application/json",
@@ -84,5 +84,5 @@ class Works(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/index-partial', MainPage),
-    webapp2.Route(r'/works/<work>/<trash>', handler=Works)
+    webapp2.Route(r'/works/<work>', handler=Works)
 ], debug=True)

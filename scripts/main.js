@@ -364,8 +364,8 @@ function BIND_SWIPE() {
 function OTHER_SIZES() {
   $("#slimscrollthis").find("img").each(function(){
     var srcattr = $(this).attr('src');    
-    var gs = srcattr.replace(/(works\/[a-z0-9-]*\/)/, "http://gs.stefaniapizzichi.it/$1" + IMGPATH + "_");
-    gs = gs.substring(1, gs.length);
+    var gs = srcattr.replace(/(works\/[a-z0-9-]*\/)small_/, "$1" + IMGPATH + "_");
+    //gs = gs.substring(1, gs.length);
     
     $(this).attr('src', gs);
   });
