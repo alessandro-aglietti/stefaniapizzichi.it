@@ -80,6 +80,10 @@ div.menulight h1.regular span i.fasmall {
     .menulight h1 > span {
         font-size: 0.8em!important;
     }
+    
+    .fancyControlsWrapper a:nth-child(1), .fancyControlsWrapper a:nth-child(2) {
+        margin-right: 20px;
+    }
 }
 
 
