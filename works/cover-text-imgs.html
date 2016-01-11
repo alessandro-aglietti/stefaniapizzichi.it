@@ -14,8 +14,8 @@
                         </div>           
                     </div>                
                 </div>
-                {% for img in imgs %}
-                  <img style="width: 100%" src="http://gs.stefaniapizzichi.it/works/{{work}}/small_{{ img.src }}" />
+                {% for n in range(nimages) %}
+                    <img style="width: 100%" src="http://gs.stefaniapizzichi.it/works/{{work}}/small_{{ work }}_{{ n }}.png" />
                 {% endfor %}
             </div>
         </div>
