@@ -19,10 +19,9 @@ $(function(){
         //top: "+=50",
         top: "-" + ($(window).height() + 100)
     }, 1000, $.bez([.25, .1, .25, 1]), function() {
+        $("body").removeClass("huge");
         $("#huge-wrapper").remove();
     });
-
-    $("body").removeClass("huge");
   }
 
   $("#huge-menu a").click(function(){
