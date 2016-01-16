@@ -173,7 +173,7 @@
       background-color: white;
       color: #ec008c;
       font-family:brandon-grotesque;
-      height: 30vh;
+      height: 13vh;
       position: relative;
       margin: 0 auto;
       width: 100%;
@@ -189,11 +189,13 @@
       position: relative;
       margin: 0 auto;
       width: 80%;
-      font-size: 6em;
+      font-size: 5em;
+      font-weight: bolder;
+      padding-left: 1.5em;
     }
 
     #huge-gray {
-      background-color: gray;
+      background-color: whitesmoke;
       height: 30vh;
       position: relative;
       margin: 0 auto;
@@ -212,19 +214,21 @@
       margin: 0 auto;
       width: 80%;
       background-color: white;
-      margin-top: -26vh;
-      margin-bottom: 11vh;
-      padding: 4vw;
+      margin-top: -23vh;
+      margin-bottom: 3.8vh;
+      padding: 8em;
     }
 
     #huge-cover-letter-title {
       font-family:brandon-grotesque;
       font-weight: bolder;
-      font-size: 2.8em;
+      font-size: 3.4em;
+      margin-bottom: 1.3em;
     }
 
     #huge-cover-letter {
       font-family:iskra;
+      font-size: 2.8em;
     }
 
     #huge-menu-container {
@@ -234,6 +238,14 @@
       background-color: #ec008c;
     }
 
+    #huge-menu a, #huge-menu a:visited, #huge-menu a:hover {
+      color: white;
+    }
+
+    #huge-menu a:hover {
+          text-decoration: line-through;
+    }
+
     #huge-menu {
       font-family:brandon-grotesque;
       position: relative;
@@ -241,7 +253,7 @@
       width: 80%;
       display: flex;
       justify-content: space-between;
-      font-size: 3em;
+      font-size: 3.7em;
       color: white;
       font-weight: bolder;
     }
@@ -253,7 +265,13 @@
       background-color: #ec008c;
       display: flex;
       justify-content: center;
-      padding-top: 2em;
+      padding-top: 4em;
+    }
+
+    @media (min-width: 1025px) {
+      #huge-wrapper {
+          font-size: 0.8vw;
+        }
     }
 </style>
 <div id="huge-wrapper">
@@ -269,9 +287,9 @@
       </div>
       <div id="huge-menu-container">
         <div id="huge-menu">
-            <div>Portfolio</div>
-            <div>Resume</div>
-            <div>Contact</div>
+            <div><a href="#work">Portfolio</a></div>
+            <div><a href="#resume">Resume</a></div>
+            <div><a href="#footer">Contact</a></div>
         </div>
       </div>
       <div id="huge-go">
@@ -367,7 +385,7 @@ function miscResLoaded(){
     <script onload="miscResLoaded()" src="//use.typekit.net/mir5pvl.js"></script>
     <script>
         try {
-            //Typekit.load();
+            Typekit.load();
         } catch (e) {}
     </script>
 

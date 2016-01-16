@@ -21,7 +21,13 @@ $(function(){
     }, 1000, $.bez([.25, .1, .25, 1]), function() {
         $("#huge-wrapper").remove();
     });
+
+    $("body").removeClass("huge");
   }
+
+  $("#huge-menu a").click(function(){
+    hugeGoAway();
+  });
 
   $("#huge-go").click(hugeGoAway);
 
