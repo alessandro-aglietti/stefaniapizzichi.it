@@ -125,6 +125,7 @@ div.menulight span.fancy-title-font {
 #slimscrollthis #scroll-inner .col-xs-10 h3 {
     font-size: 20px;
     margin-top: 40px;
+    line-height: 30px;
 }
 
 .fancybox-wrap iframe.vimeo {
