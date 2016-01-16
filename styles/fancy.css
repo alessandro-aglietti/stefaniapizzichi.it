@@ -170,7 +170,7 @@ div.fancyControlsWrapper {
 /** FIX 16 GENNAIO 2016 **/
 @media (min-width: 1800px) {
   #main_works a:hover .text-image {
-    margin-top: 200px;
+    margin-top: 153px;
   }
 
   #main_works h1 {

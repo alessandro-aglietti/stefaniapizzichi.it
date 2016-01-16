@@ -14,6 +14,7 @@ vendor.add('lib')
 #import requests
 from google.appengine.api import urlfetch
 
+from collections import OrderedDict
 
 from user_agents import parse
 
@@ -37,12 +38,19 @@ class MainPage(webapp2.RequestHandler):
         elif user_agent.is_tablet:
             imgpath = 'medium'
 
+        '''
         template_values = {
             'imgpath': imgpath,
         }
+        '''
+        with open('sp.json', 'r') as myfile:
+            model=json.loads(myfile.read().replace('\n', ''))
+            
+        model["imgpath"] = imgpath
+        model["works"] = OrderedDict(sorted(model["works"].items(), key= lambda x: x[1]['thumbindex'], reverse=False))
 
         template = JINJA_ENVIRONMENT.get_template('index-partial.html')
-        self.response.write(template.render(template_values))
+        self.response.write(template.render(model))
 
 class Works(webapp2.RequestHandler):
 
