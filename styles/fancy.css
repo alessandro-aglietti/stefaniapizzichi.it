@@ -70,17 +70,17 @@ div.menulight h1.regular span i.fasmall {
     .fb-xs-left > span:first-child{
         margin-left: 0px;
     }
-    
+
     .fb-xs-left > span:nth-child(4) {
         margin-left: 0px;
         line-height: 23px;
         margin-top: -5px;
     }
-    
+
     .menulight h1 > span {
         font-size: 0.8em!important;
     }
-    
+
     .fancyControlsWrapper a:nth-child(1), .fancyControlsWrapper a:nth-child(2) {
         margin-right: 20px;
     }
@@ -163,4 +163,25 @@ div.fancyControlsWrapper {
 .align-self-center {
     align-self: center;
     -webkit-align-self: center;
+}
+
+
+/**********************/
+/** FIX 16 GENNAIO 2016 **/
+@media (min-width: 1800px) {
+  #main_works a:hover .text-image {
+    margin-top: 200px;
+  }
+
+  #main_works h1 {
+    font-size: 52px;
+  }
+
+  #main_works h2 {
+    font-size: 44px;
+  }
+
+  #main_works .thumbcol span.fa-stack {
+    font-size: 31px;
+  }
 }
