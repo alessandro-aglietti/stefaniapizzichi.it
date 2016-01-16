@@ -23,6 +23,8 @@ $(function(){
         $("#huge-wrapper").remove();
     });
   }
+  
+  $('#huge-wrapper').on('mousewheel', hugeGoAway);
 
   $("#huge-menu a").click(function(){
     hugeGoAway();
