@@ -117,12 +117,167 @@
     <!--<script src="scripts/main.js"></script>-->
 
     <!-- <link rel="stylesheet" href="styles/output.min.css"> -->
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        switch (document.domain)
+        {
+                case "huge.stefaniapizzichi.it":
+                        ga('create', 'UA-59950190-2', 'auto');
+                        break;
+                default:
+                        ga('create', 'UA-59950190-1', 'auto');
+        }
+
+
+      ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
+  <script>if (document.domain === "huge.stefaniapizzichi.it") document.body.classList.add("huge");</script>
+
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+<style>
+    body.huge {
+      overflow: hidden;
+    }
+
+    body.huge #huge-wrapper {
+      display: block;
+    }
+
+    #huge-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        background-color: #ec008c;
+        font-size: 1.3vw;
+        display: none;
+    }
+
+    #huge-strillo-wrapper {
+      background-color: white;
+      color: #ec008c;
+      font-family:brandon-grotesque;
+      height: 30vh;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      webkit-box-shadow: 0px 0px 32px 0px rgba(150,150,150,1);
+      -moz-box-shadow: 0px 0px 32px 0px rgba(150,150,150,1);
+      box-shadow: 0px 0px 32px 0px rgba(150,150,150,1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+    }
+
+    #huge-strillo {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      font-size: 6em;
+    }
+
+    #huge-gray {
+      background-color: gray;
+      height: 30vh;
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    #huge-cover-letter-wrapper {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    #huge-cover-letter-container {
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      background-color: white;
+      margin-top: -26vh;
+      margin-bottom: 11vh;
+      padding: 4vw;
+    }
+
+    #huge-cover-letter-title {
+      font-family:brandon-grotesque;
+      font-weight: bolder;
+      font-size: 2.8em;
+    }
+
+    #huge-cover-letter {
+      font-family:iskra;
+    }
+
+    #huge-menu-container {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #ec008c;
+    }
+
+    #huge-menu {
+      font-family:brandon-grotesque;
+      position: relative;
+      margin: 0 auto;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 3em;
+      color: white;
+      font-weight: bolder;
+    }
+
+    #huge-go {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      background-color: #ec008c;
+      display: flex;
+      justify-content: center;
+      padding-top: 2em;
+    }
+</style>
+<div id="huge-wrapper">
+      <div id="huge-strillo-wrapper">
+          <div id="huge-strillo">Ciao Huge, here I am!</div>
+      </div>
+      <div id="huge-gray"></div>
+      <div id="huge-cover-letter-wrapper">
+        <div id="huge-cover-letter-container">
+          <div id="huge-cover-letter-title">Welcome to my website, I’m happy to see you.</div>
+          <div id="huge-cover-letter">Here you can find everything you need to know about my work, studies, hobbies and passions.<br /> Moreover - just to be on the safe side - I have prepared a shared link with all the material required (resume, cover letter, video, three examples).<br /><br />I hope that you’re going to enjoy my web space and have a nice day!</div>
+        </div>
+      </div>
+      <div id="huge-menu-container">
+        <div id="huge-menu">
+            <div>Portfolio</div>
+            <div>Resume</div>
+            <div>Contact</div>
+        </div>
+      </div>
+      <div id="huge-go">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAARCAYAAAAsT9czAAAA20lEQVQ4ja3RoW7CQADH4RJcDQoUT4PD8FwLL4DeEp4BR7AoBGaiL7GRIDAf5prduq7tHf0n5353n7iiCMMGN3xgWmQO0/DGDZu2YI2Hn+1zwADto3ceWMfBCnd/lwS2QPXuWNXRd0tQ7x2TAdAktP/tqw4PHRHsusAA7XreONRxiWMOOBA6oowvlTilgAOh0y8oujzDuefyNuq3Pe0Zs66PHgK+hZMPJYKvQw3wkgFdkqAInOOaAF0xT4YywNegBHAcKAIXqFqgCovRoAhcNsAKy9GhBvgZTjL0BBgEn32iZaTYAAAAAElFTkSuQmCC" />
+      </div>
+</div>
 
 <!-- LOADER START -->
 <!-- http://tympanus.net/codrops/2014/08/05/page-preloading-effect/ -->
@@ -212,31 +367,10 @@ function miscResLoaded(){
     <script onload="miscResLoaded()" src="//use.typekit.net/mir5pvl.js"></script>
     <script>
         try {
-            Typekit.load();
+            //Typekit.load();
         } catch (e) {}
     </script>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        switch (document.domain)
-        {
-                case "huge.stefaniapizzichi.it":
-                        ga('create', 'UA-59950190-2', 'auto');
-                        break;
-                default:
-                        ga('create', 'UA-59950190-1', 'auto');
-        }
-
-      
-      ga('send', 'pageview');
-    </script>
-    
     <!-- fancybox -->
     <script onload="miscResLoaded()" type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
     <script onload="miscResLoaded()" type="text/javascript" src="/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>

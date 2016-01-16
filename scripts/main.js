@@ -12,6 +12,22 @@ function imagesAreLoaded() {
     registerFancyboxe();
 }
 
+$(function(){
+  function hugeGoAway() {
+    $("#huge-wrapper").animate({
+        //opacity: 0,
+        //top: "+=50",
+        top: "-" + ($(window).height() + 100)
+    }, 1000, $.bez([.25, .1, .25, 1]), function() {
+        $("#huge-wrapper").remove();
+    });
+  }
+
+  $("#huge-go").click(hugeGoAway);
+
+  $("#huge-wrapper").swipe({swipe:hugeGoAway});
+});
+
 $(window).ready(function() {
     'use strict';
     // $('#contact').scrollTo($("#footer"));
@@ -243,9 +259,9 @@ function registerFancyboxe() {
                 },
                 afterShow: function(current, previous) {
                     setTimeout(function() {
-                    
-                        
-                    
+
+
+
                         /*var fbtop = Number($(".fancybox-wrap").css("top").replace("px", ""));
                         var fbwrap = $(".fancybox-wrap").height();
                         var growH = $(window).height() - fbwrap - fbtop;
@@ -274,14 +290,14 @@ function registerFancyboxe() {
                         //$("#slimscrollthis").trigger("mouseover");
                         BIND_SWIPE();
                         OTHER_SIZES();
-                        
-                        
-                        
+
+
+
                         if ( $(".vimeo-cover") ) {
                             var vimeoCoverHeight = $(".vimeo-cover").width() * 9 / 16;
                             $(".vimeo-cover").height(vimeoCoverHeight + "px");
                         }
-                        
+
                     }, 500);
 
                     return true;
@@ -363,10 +379,10 @@ function BIND_SWIPE() {
 
 function OTHER_SIZES() {
   $("#slimscrollthis").find("img").each(function(){
-    var srcattr = $(this).attr('src');    
+    var srcattr = $(this).attr('src');
     var gs = srcattr.replace(/(works\/[a-z0-9-]*\/)small_/, "$1" + IMGPATH + "_");
     //gs = gs.substring(1, gs.length);
-    
+
     $(this).attr('src', gs);
   });
 }
