@@ -10,7 +10,11 @@
                     </div>                
                 </div>
                 {% for n in range(nimages) %}
+                    {% if nimages == 1 %}
+                    <img style="width: 100%" src="http://gs.stefaniapizzichi.it/works/{{work}}/small_{{ work }}.png" />
+                    {% else %}
                     <img style="width: 100%" src="http://gs.stefaniapizzichi.it/works/{{work}}/small_{{ work }}_{{ n + 1}}.png" />
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
