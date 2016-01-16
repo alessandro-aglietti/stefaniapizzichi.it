@@ -231,6 +231,12 @@
       font-size: 2.8em;
     }
 
+    #huge-cover-letter a, #huge-cover-letter a:hover, #huge-cover-letter a:visited {
+      color:black;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+
     #huge-menu-container {
       position: relative;
       margin: 0 auto;
@@ -242,7 +248,7 @@
       color: white;
     }
 
-    #huge-menu a:hover {
+    #huge-menu a:hover, #huge-cover-letter a:hover{
           text-decoration: line-through;
     }
 
@@ -293,6 +299,22 @@
         padding-top: 6.3em;
       }
     }
+
+    @media (min-width: 767px) and (orientation: portrait) {
+      #huge-wrapper {
+          font-size: 1.16vw;
+        }
+
+      .huge-hide {
+        display: none;
+      }
+    }
+
+    @media (min-width: 599px) and (orientation: portrait) {
+      #huge-wrapper {
+          font-size: 1.35vw;
+        }
+    }
 </style>
 <div id="huge-wrapper">
       <div id="huge-strillo-wrapper">
@@ -302,7 +324,7 @@
       <div id="huge-cover-letter-wrapper">
         <div id="huge-cover-letter-container">
           <div id="huge-cover-letter-title">Welcome to my website, I’m happy to see you.</div>
-          <div id="huge-cover-letter">Here you can find everything you need to know about my work, studies, hobbies and passions.<br /> Moreover - just to be on the safe side - I have prepared a <a href="
+          <div id="huge-cover-letter">Here you can find everything you need to know about my work, studies, hobbies and passions.<br class="huge-hide" /> Moreover - just to be on the safe side - I have prepared a <a href="
 https://drive.google.com/open?id=0B_YBACfcUUs4ZWhfeWxEeEdjS1U" target="_blank">shared link</a> with all the material required (resume, cover letter, video, three examples).<br /><br />I hope that you’re going to enjoy my web space and have a nice day!</div>
         </div>
       </div>
