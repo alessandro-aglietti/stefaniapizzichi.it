@@ -182,7 +182,13 @@
       box-shadow: 0px 0px 32px 0px rgba(150,150,150,1);
       z-index: 999;
       display: flex;
-      align-items: center;
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
     }
 
     #huge-strillo {
@@ -258,6 +264,13 @@
       margin: 0 auto;
       width: 80%;
       display: flex;
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
       font-size: 3.7em;
       color: white;
@@ -270,6 +283,13 @@
       width: 100%;
       background-color: #ec008c;
       display: flex;
+      display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -webkit-justify-content: center;
       justify-content: center;
       padding-top: 4em;
     }
