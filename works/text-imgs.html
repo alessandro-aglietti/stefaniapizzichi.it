@@ -5,12 +5,7 @@
             <div id="scroll-inner">
                 <div class="container-fluid" style="background-color: white;">
                     <div class="row">
-                        <div class="col-xs-1"></div>
-                        <div class="col-xs-10">
-                            <h1>{{h1}}</h1>
-                            <h3>{{h3}}</h3>
-                            <p><b>Tag</b> {{tag}}</p>
-                        </div>           
+                        {% include 'works/text.html' %}           
                     </div>                
                 </div>
                 {% for n in range(nimages) %}
