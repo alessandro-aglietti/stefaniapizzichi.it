@@ -165,7 +165,7 @@
         left: 0;
         z-index: 9999;
         background-color: #ec008c;
-        font-size: 1.3vw;
+        font-size: 1vw;
         display: none;
     }
 
@@ -294,8 +294,6 @@
       padding-top: 4em;
     }
 
-
-
     @media (min-width: 599px) and (orientation: portrait) {
       #huge-wrapper {
           font-size: 1.35vw;
@@ -355,6 +353,14 @@
         display: none;
       }
     }
+
+    @media (orientation: landscape) {
+      #huge-wrapper {
+          font-size: 1vh;
+        }
+      }
+
+
 </style>
 <div id="huge-wrapper">
       <div id="huge-strillo-wrapper">
