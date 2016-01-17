@@ -232,16 +232,16 @@ var IMGPATH = '{{ imgpath }}';
     </div>
 
     <div id="main_works">
-    
+
         {% set workcounter = 0 %}
-    
+
         {% for key, value in works.iteritems() %}
             {% set workcounter = workcounter + 1 %}
-        
+
             {% if workcounter == 1  %}
             <div class="row">
             {% endif %}
-            
+
             <a sp-href="/works/{{ key|e }}" class="col-md-4 col-sm-4 thumbcol {{ value.thumbclass }}" href="#" target="_blank">
                 <img class="img-responsive thumbcol thumb-style" src="/images/thumb/{{ imgpath }}/{{ key|e }}.jpg">
                 <div class="text-image">
@@ -253,13 +253,13 @@ var IMGPATH = '{{ imgpath }}';
                     </span>
                 </div>
             </a>
-            
-            
+
+
             {% if workcounter == 3  %}
             </div>
                 {% set workcounter = 0 %}
             {% endif %}
-            
+
         {% endfor %}
 
     </div><!-- fine main_works -->
@@ -330,7 +330,7 @@ var IMGPATH = '{{ imgpath }}';
         <div class="col-md-8 col-sm-8">
             <img src="/images/s_p.png">
             <p><strong>Born</strong> 3rd May, 1990 @ Florence</br>
-            <strong>Live</strong> in Milan, where I'm looking for a job</br>
+            <strong>Live</strong> in Milan, where I work</br>
             <strong>Languages:</strong> Italian (mothertongue) - English (B1) - Japanese (A2)</br>
             <strong>My must:</strong> bike, backpack, Wi-Fi connection, Nexus5 and Kindle </br>
             <strong>What I like:</strong> manga&anime, cinema, handmade things, ice cream and C. Bukowski</br>
