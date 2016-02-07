@@ -186,3 +186,19 @@ div.fancyControlsWrapper {
     font-size: 31px;
   }
 }
+
+
+@media (min-width: 2200px) {
+  #slimscrollthis #scroll-inner .col-xs-10 h1 {
+    font-size: 35px;
+  }
+
+  #slimscrollthis #scroll-inner .col-xs-10 h3 {
+    font-size: 23px;
+    line-height: 45px;
+  }
+
+  #slimscrollthis #scroll-inner .col-xs-10 p {
+    font-size: 20px;
+  }
+}
