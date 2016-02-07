@@ -23,7 +23,7 @@ $(function(){
         $("#huge-wrapper").remove();
     });
   }
-  
+
   $('#huge-wrapper').on('mousewheel', hugeGoAway);
 
   $("#huge-menu a").click(function(){
@@ -77,9 +77,8 @@ function doTheRestOf() {
             //event.preventDefault();
             $('html, body').animate({
                 scrollTop: $('#' + target[1]).offset().top,
-                duration: 1000,
-                easing: 'swing'
-            });
+                easing: 'ease-in'
+            }, 2500);
         }
     });
 
